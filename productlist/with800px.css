@@ -1,0 +1,139 @@
+
+.whole-cont{
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    /* border: 2px solid black; */
+    display: block;
+    padding: 5vh 4vw;
+    gap: 10px;
+}
+
+.whole-cont .sideBar{
+    /* border: 2px solid rgb(255, 0, 43); */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(223, 222, 222);
+    position: absolute;
+    left: 0;
+    min-height: 50%;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 2px 2px 2px grey;
+    /* display: none; */
+    animation: linear forwards;
+    animation-duration: 500ms;
+    z-index: 1;
+    transition: animation cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    
+}
+
+@keyframes show {
+    from{
+        /* transform: scale(0); */
+        left: -100%;
+    }
+    to{
+        /* transform: scale(1); */
+        left: 0;
+    }
+}
+@keyframes remove {
+    from{
+        /* transform: scale(1); */
+        left: 0;
+    }
+    to{
+        /* transform: scale(0); */
+        left: -100%;
+    }
+
+}
+.openSideBar b{
+    display: flex;
+    align-items: center;
+    padding: 6px;
+
+}
+.openSideBar{
+    width: fit-content;
+    background-color: rgb(139, 139, 139);
+    padding: 2px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.remove-sidebar-menu{
+    position: absolute;
+    right: 10px;
+    width: fit-content;
+    overflow: hidden;
+    display: block;
+}
+.whole-cont .productList{
+    width: 100%;
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.productList .content-body{
+    width: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    /* gap: 20px; */
+}
+.productCard{
+    box-sizing: border-box;
+    width: 40vw;
+    height: fit-content;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    /* border: 2px solid black; */
+    margin: 2px;
+}
+
+
+.productCard .productImg{
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 1px 4px grey;
+    background: linear-gradient(90deg, #7e7d7d 0%, #dadadb 27%, #a4a5a5 64%, #959696 100%);
+    border-radius: 2px;
+    overflow: hidden;
+}
+.productCard .productImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productCard .productImg img:hover{
+    transform: scale(1.1);
+    transition: transform 10s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+
+.productCard .productText{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+.productCard .productText .productName{
+    width: fit-content;
+    font-size: 15px;
+}
+.productCard .productText .productPrice{
+    width: fit-content;
+    font-size: 15px;
+}
